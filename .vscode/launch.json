@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "name": "Pico Debug",
+      "cwd": "${workspaceRoot}",
+      "executable": "${workspaceRoot}/build/keyboard.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "runToEntryPoint": "main",
+      "device": "RP2040",
+      "showDevDebugOutput": "raw",
+      "configFiles": [
+        "interface/cmsis-dap.cfg",
+        "target/rp2040.cfg"
+      ],
+      "svdFile": "${workspaceRoot}/pico-sdk/src/rp2040/hardware_regs/rp2040.svd"
+    }
+  ]
+}
